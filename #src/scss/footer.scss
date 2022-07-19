@@ -1,0 +1,113 @@
+.footer {
+	background-color: #1c242a;
+	padding: 45px 0 50px;
+	@media (max-width: 670px) {
+		padding: 30px 0 20px;
+	}
+	/* .footer__content */
+	&__content {
+		display: flex;
+		@media (max-width: 767px) {
+			display: block;
+			text-align: center;
+		}
+	}
+	/* .footer__column */
+	&__column {
+		&_full {
+			flex: 1 1 auto;
+			@media (max-width: 670px) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	/* .footer__logo */
+	&__logo {
+		display: block;
+		margin: 0 0 20px 0;
+		@media (max-width: 670px) {
+			margin: 0 0 10px 0;
+		}
+	}
+	/* .footer__info */
+	&__info {
+		font-family: "PT Sans";
+		color: #bb9c66;
+		font-size: 14px;
+		white-space: nowrap;
+	}
+	/* .footer__menu */
+	&__menu {
+		padding: 0 23px;
+	}
+	/* .footer__list */
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			margin: 10px 15px 0 0;
+		}
+		@media (max-width: 767px) {
+			justify-content: center;
+		}
+	}
+	/* .footer__link */
+	&__link {
+		font-family: "pfdin";
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+		color: #ffffff;
+		@media (min-width: 992px) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	/* .footer__contacts */
+	&__contacts {
+		white-space: nowrap;
+		padding: 7px 0 0 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		@media (max-width: 767px) {
+			align-items: center;
+			margin: 0 0 20px 0;
+		}
+	}
+	/* .footer__phone */
+	&__phone {
+		display: flex;
+		align-items: flex-start;
+		font-family: "BravoRGRegular";
+		color: #bb9c66;
+		text-transform: uppercase;
+		font-size: 50px;
+		small {
+			font-size: 25px;
+			margin: 2px 5px 0 0;
+		}
+		@media (max-width: 795px) {
+			font-size: 40px;
+			small {
+			font-size: 20px;
+			}
+		}
+		@media (max-width: 767px) {
+			margin-bottom: 5px;
+		}
+	}
+	/* .footer__callback */
+	&__callback {
+		font-family: "PT Sans";
+		color: #bb9c66;
+		font-size: 14px;
+		background: url('../img/callback-icon.svg') left no-repeat;//bg+ snippet
+		padding-left: 13px;
+		span {
+			border-bottom: 1px dashed;
+		}
+	}
+}

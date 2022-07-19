@@ -1,0 +1,81 @@
+/*.btn*/
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	/*Верхняя и нижняя границы кнопки*/
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 3px;
+		width: 100%;
+	}
+	&:before {
+		top: 0;
+		background-color: #c2a674;
+	}
+	&:after {
+		background-color: #8d642e;
+		bottom: 0;
+	}
+	/*.btn__body*/
+	.btn__body {
+		/*Границы по бокам*/
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			height: 100%;
+			top: 0;
+			width: 3px;
+			background-image: linear-gradient(to top, #8d642e, #c2a674)
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+		span {
+			height: 50px;
+			display: inline-flex;//Элемент ведёт себя как строчный и выкладывает содержимое согласно флекс-модели.
+			/*сниппет fbc*/
+			justify-content: center;
+			align-items: center;
+			//</сниппет fbc>
+			padding: 0 50px;
+			color: #fff;
+			font-family: pfdin;
+			font-size: 15px;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			position: relative;
+			/*Градиент внутри кнопки*/
+			&:after {
+				content: '';
+				height: 50%;
+				transition: all 0.3s;
+				top: 0;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				background-image: linear-gradient(to top, #bb9c66 0%, rgba(187, 156, 102, 0) 100%);
+				opacity: 0.06;
+			}
+		}
+	}
+	@media (min-width: 992px) {
+		&:hover {
+			.btn__body span {
+				&:after {
+					height: 100%;
+					opacity: 0.3;
+				}
+			}
+		}
+	}
+}
+._ibg {
+}
