@@ -5,7 +5,7 @@
   "main": "index.html",
   "homepage": "https://markel496.github.io/luxtrader",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d Luxtrader"
   },
   "author": "fls",
   "license": "ISC",
